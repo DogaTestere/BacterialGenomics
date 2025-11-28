@@ -1,14 +1,4 @@
-# Devenv
-.devenv*
-devenv.local.nix
-.envrc
-
-devenv.lock
-devenv.nix
-devenv.yaml
-
-# direnv
-.direnv
-
 # pre-commit
 .pre-commit-config.yaml
+
+.nextflow/
