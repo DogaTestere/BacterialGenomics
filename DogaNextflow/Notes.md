@@ -26,6 +26,11 @@ Bir process içerisine birden fazla kanal ekleyeceksek kullanılıyor. Mesela he
 Bunun dışında bir kanal ve bir listenin birleştirilmesi için de kullanılıyor.
 
 Ayrıca hem tuple hem de combine için birleştirilen variable'ların yerleri önemli, input sırası birlşetiğinde oluşan listenin sırasında olmalı. Yoksa yanlış input yanlış yere gider.
+
+> [!NOTE]
+> Do not supply more than one channel when calling a process with multiple inputs. Invoking a process with multiple channels can lead to non-deterministic behavior. All additional inputs should be dataflow values.
+Documentationda da aynı durumdan bahsediliyor, sorunun çözülmesi için `.join` kullanılmasını öneriyor.
+
 ## Main ve Publish
 Publish, normalde sonuçların belirli bir yere gönderilmesini sağlayan publishDir özelliğinin yerine geçmek için kullanılıyor. 
 Yani eğer başka bir workflow bu workflow tarafından üretilen bir dosyayı kullanmak istiyorsa ya publishDir yada output ile tanımlanan bir noktada olması gerekiyor.
