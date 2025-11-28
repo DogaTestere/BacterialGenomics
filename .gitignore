@@ -1,4 +1,8 @@
 # pre-commit
 .pre-commit-config.yaml
 
+# nextflow folder and logs
 .nextflow/
+work/
+.nextflow.log
+.netflow.log.*
