@@ -137,11 +137,11 @@ workflow {
     concensusFasta = concensusCreation(vcfFile, ref_ch)
 
     publish:
-    consensusFinished = concensusFasta 
+    concensusFasta = concensusFasta
 }
 
 output {
-    concensusFinished {
+    concensusFasta {
         path "."
     }
 }
