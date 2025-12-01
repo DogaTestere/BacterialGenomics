@@ -16,10 +16,23 @@ process annotate_genome {
 }
 
 workflow {
+    main:
+    //params.input_fasta = '/mnt/c/Users/Dell/OneDrive/Masaüstü/e_coli_model/e_coli.fasta'
+    // config de bu oluşucak ^
 
-    params.input_fasta = '/mnt/c/Users/Dell/OneDrive/Masaüstü/e_coli_model/e_coli.fasta'
+    fasta_ch = channel.fromPath("./results/*.fasta", checkIfExists:true)
 
-    fasta_channel = Channel.fromPath(params.input_fasta)
+    //fasta_channel = Channel.fromPath(params.input_fasta)
 
-    annotate_genome(fasta_channel)
+    //annotate_genome(fasta_channel)
+    annoted_dir = annotate_genome(fasta_ch)
+
+    publish:
+    annoted_dir = annoted_dir
+}
+
+output {
+    annoted_dir {
+        path "./annotation"
+    }
 }

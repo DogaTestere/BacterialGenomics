@@ -1,0 +1,17 @@
+name: bioenv
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.10
+  - prokka=1.14.6
+  - trimmomatic=0.39
+  - fastqc=0.12.1
+  - samtools=1.17
+  - bcftools=1.17
+  - htslib=1.17
+  - bowtie2=2.5.1
+  - openjdk=17  # needed for trimmomatic
+  - perl=5.32   # prokka-compatible

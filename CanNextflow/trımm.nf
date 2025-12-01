@@ -6,10 +6,16 @@ process TRIMMING {
     tuple val(sample), path(read1), path(read2)
 
     output:
+    tuple path("trimmed/${sample}_R1_paired.fastq.gz"),
+        path("trimmed/${sample}_R1_unpaired.fastq.gz"),
+        path("trimmed/${sample}_R2_paired.fastq.gz"),
+        path("trimmed/${sample}_R2_unpaired.fastq.gz")
+    /*
     path "trimmed/${sample}_R1_paired.fastq.gz"
     path "trimmed/${sample}_R1_unpaired.fastq.gz"
     path "trimmed/${sample}_R2_paired.fastq.gz"
     path "trimmed/${sample}_R2_unpaired.fastq.gz"
+    */
 
     script:
     """
@@ -23,8 +29,19 @@ process TRIMMING {
 }
 
 workflow {
+    main:
+    //fastq_ch = Channel.fromFilePairs("/home/cangercek/*_R{1,2}_001.fastq.gz", flat: true)
 
-    fastq_ch = Channel.fromFilePairs("/home/cangercek/*_R{1,2}_001.fastq.gz", flat: true)
+    fastq_ch = channel.fromFilePairs("./DogaNextflow/FastqFiles/*_R{1,2}_001.fastq.gz", flat:true)
 
-    TRIMMING(fastq_ch)
+    trim_results = TRIMMING(fastq_ch)
+
+    publish:
+    trimm= trim_results
+}
+
+output {
+  trimm {
+    path "trimm"
+  }
 }

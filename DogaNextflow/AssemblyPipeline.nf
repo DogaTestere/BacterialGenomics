@@ -7,6 +7,8 @@ assert path.name == 'file.txt'
 assert path.parent == '/some/path'
 */
 
+// örnek dosyalarının baseNAME i olması lazım
+// adımların neden yapıldığını yazıcaz
 process indexing {
     // The tuple qualifier groups multiple values into a single input definition.
     input:
