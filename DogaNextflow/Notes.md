@@ -63,3 +63,15 @@ results/
     └── ...
 ```
 şöyle bir klasör elde ediliyor.
+
+---
+
+Work directory cleanup
+
+The clean command removes work directories and cached intermediate files from past executions.
+
+Use this to free disk space, clean up failed or test runs, or maintain your work directory. Use -n to perform a dry run and show what would be deleted. Use -f to delete files.
+
+nextflow clean -n
+
+nextflow clean dreamy_euler -f
