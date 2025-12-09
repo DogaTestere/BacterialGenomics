@@ -9,10 +9,12 @@ workflow {
     // 1) QC: sadece FASTQC (raw)
     qc_out = QC_PIPELINE()
 
-    // 2) TRIMMING: ham fastqlardan trim
+    // 2) TRIMMING: ham fastqlardan trim,sonraki aşamada kullanılacağı için buna değişken atamak zorunlu.
     trim_out = TRIMMING_PIPELINE()
 
     // 3) ASSEMBLY: trimlenmiş veriden SPAdes
     ASSEMBLY_PIPELINE(trim_out.trimmed_fastq_out)
+    //  assembly_out = ASSEMBLY_PIPELINE(trim_out.trimmed_fastq_out) şeklinde de yazabilirdik ama son aşama olduğu için yazmadık, parantez içindekiler input almasını sağlıyor.
+
 }
 
