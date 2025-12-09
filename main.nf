@@ -14,42 +14,63 @@ workflow {
     // 2) TRIMMING: ham fastqlardan trim
     trim_out = TRIMMING_PIPELINE()
 
+    /*
+    TRIMMING_PIPELINE 2 adet sonuç çıkartıyor biri düz {sample, read1, read2} channel = trimmed_raw
+    Diğeri ise {sample, [read1, read2]} = trimmed_shaped
+    Farklı olmalarının nedeni REFERENCE_ASSEMBLY kısmında BOWTIE_ALIGNMENT adımının sonuçları {sample, [read1, read2]} bu şekilde beklemesi, eğer sonuçlar farklı bir şekilde gelirse kod çalışmıyor
+    */
+
     // 3) ASSEMBLY: trimlenmiş veriden SPAdes
-    ASSEMBLY_PIPELINE(trim_out.trimmed_raw)
+    assembly_out = ASSEMBLY_PIPELINE(trim_out.trimmed_raw)
 
     // 3.A) ASSEMBLY: Trimlenmiş veriden Bcftools ile Assembly(Reference Guided Assembly)
     reference_out = REFERENCE_ASSEMBLY(trim_out.trimmed_shaped)
 
     publish:
+    fastqc_results = qc_out.raw_fastqc_out
+    // Trimmomatic outputları
+    trimmed_files = trim_out.trimmed_raw
+    // deNovo Assembly Outputları
+    denovo_assembly = assembly_out.assembly_out
+    // Reference Assembly Outputları
     indexed_ref = reference_out.indexed_ref
     aligned_bam = reference_out.aligned_bam
     sorted_bam = reference_out.sorted_bam
     indexed_bam = reference_out.indexed_bam
     variant_bcf = reference_out.variant_bcf
     indexed_vcf = reference_out.indexed_vcf
-    concensus_fastq = reference_out.concensus_fastq
+    reference_assembly = reference_out.concensus_fastq
 }
 
 output {
     indexed_ref {
-        path "results/bowtie/indexing"
+        path "./bowtie/indexing"
     }
     aligned_bam {
-        path "results/bowtie/alignment"
+        path "./bowtie/alignment"
     }
     sorted_bam {
-        path "results/samtools/sorting"
+        path "./samtools/sorting"
     }
     indexed_bam {
-        path "results/samtools/indexing"
+        path "./samtools/indexing"
     }
     variant_bcf {
-        path "results/bcftools/collapsing"
+        path "./bcftools/collapsing"
     }
     indexed_vcf {
-        path "results/bcftools/indexing"
+        path "./bcftools/indexing"
     }
-    concensus_fastq {
-        path "results/concensus"
+    reference_assembly {
+        path "./referenceAssembly"
+    }
+    denovo_assembly {
+        path "./denovoAssembly"
+    }
+    trimmed_files {
+        path "./trimmomatic"
+    }
+    fastqc_results {
+        path "./fastqc"
     }
 }
