@@ -26,6 +26,9 @@ workflow {
     // 3.A) ASSEMBLY: Trimlenmiş veriden Bcftools ile Assembly(Reference Guided Assembly)
     reference_out = REFERENCE_ASSEMBLY(trim_out.trimmed_shaped)
 
+    //Prokka kısmı
+    annotation_out = ANNOTATION_FLOW(reference_out.concensus_fastq)
+
     publish:
     fastqc_results = qc_out.raw_fastqc_out
     // Trimmomatic outputları
@@ -40,6 +43,7 @@ workflow {
     variant_bcf = reference_out.variant_bcf
     indexed_vcf = reference_out.indexed_vcf
     reference_assembly = reference_out.concensus_fastq
+    annotated_dir = annotation_out.annotated_output
 }
 
 output {
@@ -72,5 +76,8 @@ output {
     }
     fastqc_results {
         path "./fastqc"
+    }
+    annotated_dir {
+        path "./annotation"
     }
 }
