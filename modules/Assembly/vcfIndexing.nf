@@ -1,6 +1,4 @@
 process BCFTOOLS_INDEX {
-    // Takes the bcf file and turns it into vcf before indexing and zipping it
-    // Output is both zipped and the indexed file since concensus genome creation needs both
     input:
     path bcf_file
 
@@ -17,3 +15,8 @@ process BCFTOOLS_INDEX {
     tabix -p vcf $zipped_file
     """
 }
+/*
+bcf dosyasını vcf dosyasına dönüştürüyor sonrasında sıkıştırıp, indeksliyor
+Sonrasında hem sıkıştırılmış dosya ve indeksli dosya geri gönderiliyor çünkü concencus oluşumunda iki dosyaya da ihtiyaç var
+Yoksa "[E::idx_find_and_load] Could not retrieve index file for 'GCA_000008865.2_ASM886v2_genomic.vcf.gz'" hatası veriyor
+*/

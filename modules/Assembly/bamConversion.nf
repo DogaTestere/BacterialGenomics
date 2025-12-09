@@ -1,8 +1,6 @@
 process SAMTOOLS_SORT {
-    // Converts sam file into a bam file then sorts it, returns the sorted bam file
     input:
     path sam_file
-    val thread_val
 
     output:
     path sorted_bam
@@ -14,6 +12,11 @@ process SAMTOOLS_SORT {
     """
     mkdir -p bam
     samtools view -uS -o bam/$bam_file $sam_file
-    samtools sort -@ $thread_val -T $tmp_file -o $sorted_bam bam/$bam_file
+    samtools sort -@ $task.cpus -T $tmp_file -o $sorted_bam bam/$bam_file
     """
 }
+
+/*
+Align edilmiş sam dosyasını bam dosyasına dönüştürüyor, sonrasında bu bam dosyasını kromozomlara göre sıralıyor
+Sıraladığı sam dosyasını döndürüyor
+*/

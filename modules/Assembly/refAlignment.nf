@@ -1,22 +1,30 @@
-// The matching files are emitted as tuples in which the first element is the grouping key of the matching pair and the second element is the list of files 
-// flat: When true the matching files are produced as sole elements in the emitted tuples (default: false).
-
 process BOWTIE_ALIGNMENT {
-    // Aligns the reads to the indexed files. Reads must come as a flattened tuple for accessing them easily
-    // Returns the sam file path with the file name being the first sample's name
     input:
     path(index_path)
-    tuple path(ref_file), path(fastq_files)
+    tuple val(sample_id), path(fastq_files)
 
     output:
     path (sam_file)
 
     script:
-    sam_file = "${fastq_files[0].baseName}"
+    sam_file = "${sample_id}.sam"
     """
-    bowtie2 -x ${index_path}/${ref_file.baseName} \
-    -1 ${fastq_files[0]} \
-    -2 ${fastq_files[1]} \
-    -S ${sam_file}
+    prefix=\$(cat ${index_path}/prefix.txt)
+
+    bowtie2 \
+        -x ${index_path}/\$prefix \
+        -1 ${fastq_files[0]} \
+        -2 ${fastq_files[1]} \
+        -S ${sam_file}
     """
 }
+
+/*
+Referans dosyasına göre trimmed veya trimmed olmayan readlerin hizalanmasını sağlıyor.
+Fastq listesinden sample_id yi buluyor ve sam dosyasının adı olarak veriyor
+prefix adını bulmak için bir önceki adımda oluşturulan text dosyası kullanılıyor
+
+sample_id şunun gibi geliyor
+[SRR493366, [/my/data/SRR493366_1.fastq, /my/data/SRR493366_2.fastq]]
+yani tuple'daki ilk eleman sample_id, ikincisi ise file pair içeren liste
+*/

@@ -9,9 +9,9 @@ workflow Pipeline1 {
 
     combined_ch = ref_ch.combine(fastq_ch)
 
-    indexed_ref = BOWTIE_INDEXING(ref_ch, params.thread_val)
+    indexed_ref = BOWTIE_INDEXING(ref_ch)
     aligned_sam = BOWTIE_ALIGNMENT(indexed_ref, combined_ch)
-    sorted_bam = SAMTOOLS_SORT(aligned_sam, params.thread_val)
+    sorted_bam = SAMTOOLS_SORT(aligned_sam)
     
     emit:
     sorted_bam_out = sorted_bam
