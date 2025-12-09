@@ -32,7 +32,7 @@ workflow {
     main:
     //fastq_ch = Channel.fromFilePairs("/home/cangercek/*_R{1,2}_001.fastq.gz", flat: true)
 
-    fastq_ch = channel.fromFilePairs("./DogaNextflow/FastqFiles/*_R{1,2}_001.fastq.gz", flat:true)
+    fastq_ch = channel.fromFilePairs("./FastqFiles/*_R{1,2}_001.fastq.gz", flat:true)
 
     trim_results = TRIMMING(fastq_ch)
 
