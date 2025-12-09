@@ -5,7 +5,7 @@
    3) Trimlenmiş FASTQ dosyalarını emit etmek
 */
 
-include { TRIMMING } from '../../process/trimming/trimming.nf'
+include { TRIMMING } from '../../../modules/process/trimming/trimming.nf'
 
 workflow TRIMMING_PIPELINE {
 

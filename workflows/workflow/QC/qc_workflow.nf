@@ -3,7 +3,7 @@
    1) FASTQC raw reads
 */
 
-include { FASTQC } from '../../process/QC/fastqc.nf'
+include { FASTQC } from '../../../modules/process/QC/fastqc.nf'
 
 workflow QC_PIPELINE {
 

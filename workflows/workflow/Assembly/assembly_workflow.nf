@@ -1,4 +1,4 @@
-include { SPADES_ASSEMBLY } from '../../process/Assembly/spades.nf'
+include { SPADES_ASSEMBLY } from '../../../modules/process/Assembly/spades.nf'
 
 workflow ASSEMBLY_PIPELINE {
 
