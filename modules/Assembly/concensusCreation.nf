@@ -7,10 +7,12 @@ process BCFTOOLS_CONCENSUS {
     path concensus_file
 
     script:
-    clean_name = zipped_file
-                .replace('_sorted', '')
-                .replace('.vcf.gz', '')
+    def clean_name = zipped_file.getName()
+                        .replace('_sorted', '')
+                        .replace('.vcf.gz', '')
+
     concensus_file = "${clean_name}.fasta"
+
     "bcftools consensus -f $ref_file $zipped_file > $concensus_file"
 }
 

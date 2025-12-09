@@ -8,17 +8,21 @@ include { BCFTOOLS_CONCENSUS } from "../../modules/Assembly/concensusCreation"
 
 workflow {
     main:
-    ref_ch = channel.fromPath(params.ref_file)
-    fastq_ch = channel.fromFilePairs(params.fastq_files)
+    ref_ch = channel.fromPath(params.ref_file, checkIfExists: true)
+    fastq_ch = channel.fromFilePairs(params.fastq_files, checkIfExists: true)
+
 
     // Can'nın pipeline sonucu olan {sample}_R1 ve {sample}_R2 paired sonuçları lazım
     // trimmed/ adlı bir klasör içinde olucak sonuçlar
     // Şuanlık kapalı, normalde fastq_ch yerine bu kullanılıcak
-    // trimms_ch = channel.fromFilePairs()
+    //trimms_ch = channel.fromFilePairs()
+
+    // Geçici trimm channel ı, results klasöründeki yolu kullanıyor
+    trimms_ch = channel.fromFilePairs(params.trimmed, checkIfExists: true)
 
     // Pipeline steps
     indexed_ref = BOWTIE_INDEXING(ref_ch)
-    aligned_bam = BOWTIE_ALIGNMENT(indexed_ref, fastq_ch)
+    aligned_bam = BOWTIE_ALIGNMENT(indexed_ref, trimms_ch)
     sorted_bam = SAMTOOLS_SORT(aligned_bam)
     indexed_bam = SAMTOOLS_INDEX(sorted_bam)
     variant_bcf = BCFTOOLS_CALL(ref_ch, sorted_bam, indexed_bam)
