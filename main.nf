@@ -5,7 +5,7 @@ include { TRIMMING_PIPELINE }  from './workflows/QualityControl/trimming_workflo
 include { ASSEMBLY_PIPELINE }  from './workflows/Assembly/assembly_workflow.nf'
 
 include { REFERENCE_ASSEMBLY } from "./workflows/Assembly/PipelineMain-doga"
-include { ANNOTATION_FLOW }    from './workflows/annotation.nf'
+include { ANNOTATION_FLOW }    from './workflows/Annotation/annotation.nf'
 
 
 workflow {
