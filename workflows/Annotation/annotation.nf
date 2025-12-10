@@ -1,4 +1,4 @@
-include { ANNOTATE_GENOME } from '../modules/prokka.nf'
+include { ANNOTATE_GENOME } from '../../modules/Annotation/prokka.nf'
 
 workflow ANNOTATION_FLOW {
     take:
