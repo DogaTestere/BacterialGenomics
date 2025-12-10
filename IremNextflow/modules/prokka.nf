@@ -1,6 +1,6 @@
 process ANNOTATE_GENOME {
     tag "$genome_fasta.baseName"
-    publishDir "results/annotation", mode: 'copy'
+ //   publishDir "results/annotation", mode: 'copy'
 
     input:
     path genome_fasta
