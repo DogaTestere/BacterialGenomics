@@ -1,20 +1,12 @@
-process ANNOTATE_GENOME {
-    tag "$genome_fasta.baseName"
-    publishDir "results/annotation", mode: 'copy'
+include { ANNOTATE_GENOME } from '../../modules/prokka.nf' 
 
-    input:
-    path genome_fasta
+workflow ANNOTATION_FLOW {
+    // Burada gelen şeye "consensus_fasta" diyelim 
+    take:
+    consensus_fasta
 
-    output:
-    path "${genome_fasta.baseName}_anno", emit: annotation_dir
+    main:
+    ANNOTATE_GENOME(consensus_fasta)
 
-    script:
-    """
-    mkdir ${genome_fasta.baseName}_anno
-    prokka --outdir ${genome_fasta.baseName}_anno \
-           --prefix ${genome_fasta.baseName} \
-           --force \
-           --cpus ${task.cpus} \
-           $genome_fasta
-    """
-}
+    emit:
+    annotated_output = ANNOTATE_GENOME.out.annotation_dir
