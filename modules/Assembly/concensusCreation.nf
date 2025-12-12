@@ -1,6 +1,6 @@
 process BCFTOOLS_CONCENSUS {
     input:
-    tuple path(zipped_file), path(indexed_vcf)
+    tuple path(zipped_file), path(indexed_vcf), path(vcf_file)
     path ref_file
 
     output:

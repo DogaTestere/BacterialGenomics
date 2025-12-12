@@ -10,7 +10,7 @@ workflow QC_PIPELINE {
     main:
 
     // 1) FASTQC raw reads
-    raw_fastqc_ch = Channel.fromPath(params.fastq_files)
+    raw_fastqc_ch = channel.fromPath(params.fastq_files)
     raw_fastqc    = FASTQC(raw_fastqc_ch)
 
     emit:

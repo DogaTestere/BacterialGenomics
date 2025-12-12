@@ -3,7 +3,7 @@ process BCFTOOLS_INDEX {
     path bcf_file
 
     output:
-    tuple path(zipped_file), path(indexed_vcf)
+    tuple path(zipped_file), path(indexed_vcf), path(vcf_file)
 
     script:
     vcf_file = "${bcf_file.baseName}.vcf"

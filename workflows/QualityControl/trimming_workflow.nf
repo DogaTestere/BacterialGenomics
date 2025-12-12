@@ -12,7 +12,7 @@ workflow TRIMMING_PIPELINE {
     main:
 
     // 1) Paired-end input channel (ham fastq dosyalarını okur)
-    pe_ch = Channel.fromFilePairs(params.fastq_files, flat:true)
+    pe_ch = channel.fromFilePairs(params.fastq_files, flat:true)
 
     // 2) Trimming step
     trimmed = TRIMMING(pe_ch)

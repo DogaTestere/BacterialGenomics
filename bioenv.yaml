@@ -14,5 +14,7 @@ dependencies:
   - htslib=1.17
   - bowtie2=2.5.1
   - spades=3.15.5
+  - matplotlib
+  - pandas
   - openjdk=17  # needed for trimmomatic
   - perl=5.32   # prokka-compatible

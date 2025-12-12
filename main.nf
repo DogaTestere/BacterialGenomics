@@ -4,9 +4,11 @@ include { QC_PIPELINE }        from './workflows/QualityControl/qc_workflow.nf'
 include { TRIMMING_PIPELINE }  from './workflows/QualityControl/trimming_workflow.nf'
 include { ASSEMBLY_PIPELINE }  from './workflows/Assembly/assembly_workflow.nf'
 
-include { REFERENCE_ASSEMBLY } from "./workflows/Assembly/PipelineMain-doga"
+include { REFERENCE_ASSEMBLY } from "./workflows/Assembly/referenceAssembly"
+
 include { ANNOTATION_FLOW }    from './workflows/Annotation/annotation.nf'
 
+include { VCF_GRAPH_CREATION } from "./workflows/GraphCreation/vcfQuality"
 
 workflow {
     main:
@@ -29,7 +31,10 @@ workflow {
     reference_out = REFERENCE_ASSEMBLY(trim_out.trimmed_shaped)
 
     //Prokka kısmı
-    annotation_out = ANNOTATION_FLOW(reference_out.concensus_fastq)
+    //annotation_out = ANNOTATION_FLOW(reference_out.concensus_fastq)
+
+    // 5) VCF Dosyasında Kalite Değerlerini Gösteren Graph Oluşturma
+    vcf_graph_out = VCF_GRAPH_CREATION(reference_out.indexed_vcf)
 
     publish:
     fastqc_results = qc_out.raw_fastqc_out
@@ -45,7 +50,11 @@ workflow {
     variant_bcf = reference_out.variant_bcf
     indexed_vcf = reference_out.indexed_vcf
     reference_assembly = reference_out.concensus_fastq
-    annotated_dir = annotation_out.annotated_output
+    // Annotation Outputları
+    //annotated_dir = annotation_out.annotated_output
+    // Grafik Oluşturma Outputları
+    depth_graph = vcf_graph_out.depth_png
+    qual_graph = vcf_graph_out.qual_png
 }
 
 output {
@@ -79,7 +88,13 @@ output {
     fastqc_results {
         path "./fastqc"
     }
-    annotated_dir {
-        path "./annotation"
+    //annotated_dir {
+    //    path "./annotation"
+    //}
+    depth_graph {
+        path "./graphs/vcf"
+    }
+    qual_graph {
+        path "./graphs/vcf"
     }
 }
