@@ -2,6 +2,8 @@ nextflow.enable.dsl = 2
 
 process CUTADAPT {
 
+    conda 'bioconda::cutadapt=4.6'
+
     input:
         tuple val(sample), path(read1), path(read2)
 

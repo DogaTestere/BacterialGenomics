@@ -1,6 +1,9 @@
 nextflow.enable.dsl = 2
 
 process FASTQC {
+
+    conda 'bioconda::fastqc=0.12.4'
+
     input:
         path reads
     output:
