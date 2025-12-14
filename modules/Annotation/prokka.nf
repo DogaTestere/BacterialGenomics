@@ -1,20 +1,21 @@
 process ANNOTATE_GENOME {
-    tag "$genome_fasta.baseName"
- //   publishDir "results/annotation", mode: 'copy'
+    // Sonuçları bu klasöre kopyala
+    publishDir "results/annotation", mode: 'copy'
 
     input:
-    path genome_fasta
+    path genome_fasta  // Gelen .fasta dosyası
 
     output:
-    path "${genome_fasta.baseName}_anno", emit: annotation_dir
+    // Python kodumuz klasör istiyordu, o yüzden klasörü çıktı veriyoruz
+    path "prokka_out", emit: annotation_dir
 
     script:
     """
-    mkdir ${genome_fasta.baseName}_anno
-    prokka --outdir ${genome_fasta.baseName}_anno \
-           --prefix ${genome_fasta.baseName} \
-           --force \
-           --cpus ${task.cpus} \
-           $genome_fasta
+    # Prokka'yı çalıştırıyoruz
+    # --outdir: Çıktı klasörünün adı (prokka_out)
+    # --prefix: Dosyaların adı (e_coli.gbf, e_coli.fna vs.)
+    # --force: Eğer klasör varsa üzerine yaz
+    
+    prokka --outdir prokka_out --prefix e_coli --force ${genome_fasta}
     """
 }
