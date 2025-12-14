@@ -1,4 +1,5 @@
 process BOWTIE_INDEXING {
+
     input:
     path ref_file
 
