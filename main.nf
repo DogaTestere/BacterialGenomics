@@ -5,10 +5,9 @@ include { TRIMMING_PIPELINE }  from './workflows/QualityControl/trimming_workflo
 include { ASSEMBLY_PIPELINE }  from './workflows/Assembly/assembly_workflow.nf'
 
 include { REFERENCE_ASSEMBLY } from "./workflows/Assembly/referenceAssembly"
+include { VCF_GRAPH_CREATION } from "./workflows/GraphCreation/vcfQuality"
 
 include { ANNOTATION_FLOW }    from './workflows/Annotation/annotation.nf'
-
-include { VCF_GRAPH_CREATION } from "./workflows/GraphCreation/vcfQuality"
 
 workflow {
     main:
@@ -36,6 +35,8 @@ workflow {
     // 5) VCF Dosyasında Kalite Değerlerini Gösteren Graph Oluşturma
     vcf_graph_out = VCF_GRAPH_CREATION(reference_out.indexed_vcf)
 
+    annotation_out = ANNOTATION_FLOW(reference_out.concensus_fastq)
+
     publish:
     fastqc_results = qc_out.raw_fastqc_out
     // Trimmomatic outputları
@@ -55,6 +56,8 @@ workflow {
     // Grafik Oluşturma Outputları
     depth_graph = vcf_graph_out.depth_png
     qual_graph = vcf_graph_out.qual_png
+
+    annotated_dir      = annotation_out.annotated_output
 }
 
 output {
@@ -97,4 +100,8 @@ output {
     qual_graph {
         path "./graphs/vcf"
     }
+    annotated_dir {
+        path "./annotation"
+    }
+    
 }
