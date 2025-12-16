@@ -11,6 +11,8 @@ include { PROKKA_FLOW }    from './workflows/Annotation/prokka.nf'
 include { PLOTTING_FLOW } from "./workflows/GraphCreation/kegg_plot.nf"
 include { KEGG_FLOW } from "./workflows/Annotation/kegg.nf"
 
+include { BAKTA_FLOW } from './workflows/Annotation/annotation.nf'
+
 workflow {
     main:
     // 1) QC: sadece FASTQC (raw)
@@ -34,10 +36,15 @@ workflow {
     //Prokka kısmı
     annotation_out = PROKKA_FLOW(reference_out.concensus_fastq)
     kegg_out = KEGG_FLOW(annotation_out.prokka_dir)
-
+   
+    // Bakta annotation
+    db_file = file(params.bakta_db) 
+    bakta_out = BAKTA_FLOW(reference_out.concensus_fastq, db_file)
+  
     // 5) Graph Oluşturma Adımları
     vcf_graph_out = VCF_GRAPH_CREATION(reference_out.indexed_vcf)
     kegg_graph_out = PLOTTING_FLOW(kegg_out.kegg_excel, annotation_out.prokka_dir)
+
 
 
     publish:
@@ -57,10 +64,12 @@ workflow {
     // Annotation Outputları
     annotated_dir = annotation_out.prokka_dir
     kegg_excel_file = kegg_out.kegg_excel
+    bakta_results = bakta_out.bakta_dir
     // Grafik Oluşturma Outputları
     depth_graph = vcf_graph_out.depth_png
     qual_graph = vcf_graph_out.qual_png
     prokka_graph = kegg_graph_out.final_folder
+
 }
 
 output {
@@ -97,6 +106,12 @@ output {
     annotated_dir {
         path "./annotation"
     }
+
+// Bakta için yeni output yolu:
+    bakta_results {              
+        path "./annotation/bakta"
+    }
+
     depth_graph {
         path "./graphs/vcf"
     }
@@ -109,4 +124,6 @@ output {
     prokka_graph {
         path "./graphs/prokka"
     }
+
 }
+
