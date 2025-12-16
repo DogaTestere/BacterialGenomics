@@ -1,19 +1,15 @@
+
 nextflow.enable.dsl = 2
 
-process RUN_KEGG {
-    tag "${meta_id}"
-    conda "${projectDir}/bioenv.yaml"
+include { RUN_KEGG } from './kegg_step.nf'
 
-    input:
-    tuple val(meta_id), path(prokka_dir)
+workflow KEGG_FLOW {
+    take:
+    prokka_dir
 
-    output:
-    tuple val(meta_id), path("${meta_id}_final_report.xlsx"), emit: kegg_excel
+    main:
+    kegg_out = RUN_KEGG(prokka_dir)
 
-    script:
-    """
-    python3 ${projectDir}/scripts/KEGG_prokka_nf.py \
-    --input ${prokka_dir}/${meta_id}.txt \
-    --output ${meta_id}_final_report.xlsx
-    """
+    emit:
+    kegg_excel = kegg_out.kegg_excel
 }
