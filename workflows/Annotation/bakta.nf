@@ -1,31 +1,25 @@
 nextflow.enable.dsl = 2
 
-process RUN_BAKTA {
-    tag "${meta_id}"
-    conda "${projectDir}/bioenv.yaml" 
-    publishDir "${params.outdir}/Annotation/Bakta", mode: 'copy'
+// 1. Modülleri (Process'leri) çağırıyoruz
+include { RUN_BAKTA } from './bakta.nf'
+// Prokka vs. varsa onları da buraya include edersin
 
-    input:
-    tuple val(meta_id), path(assembly_fasta)
-    path db_path
+// 2. Workflow Tanımı
+workflow BAKTA_FLOW {
+    take:
+    assembly_input  // Main'den gelen [id, fasta] ikilisi
 
-    output:
-    path "${meta_id}_Bakta_Results", emit: bakta_dir
-    path "${meta_id}_Bakta_Results/*.gff3", emit: bakta_gff
-    path "${meta_id}_Bakta_Results/*.gbff", emit: bakta_gbk
-    path "${meta_id}_Bakta_Results/*.txt", emit: bakta_txt
+    main:
+    // Veritabanı yolunu belirliyoruz (Parametreden veya sabit yoldan)
+    // Eğer params.bakta_db tanımlı değilse varsayılan db/db-light'a bakar
+    db_path = params.bakta_db ? file(params.bakta_db) : file("${projectDir}/db/db-light")
 
-    script:
-    """
-    # Bakta çalıştırma komutu
-    # --skip-plot: Hızlandırmak için grafiği atlıyoruz
-    
-    bakta --db ${db_path} \
-          --output ${meta_id}_Bakta_Results \
-          --prefix ${meta_id} \
-          --min-contig-length 200 \
-          --threads 2 \
-          --force \
-          ${assembly_fasta}
-    """
+    // --- BAKTA AKIŞI ---
+    // İşçiye (Process'e) malzemeyi veriyoruz
+    bakta_results = RUN_BAKTA(assembly_input, db_path)
+
+    emit:
+    // Çıktıları dışarı (Main'e) geri yolluyoruz
+    bakta_out_dir = bakta_results.bakta_dir
+    bakta_gff     = bakta_results.bakta_gff
 }
