@@ -1,17 +1,16 @@
+
 nextflow.enable.dsl = 2
 
-process RUN_PROKKA {
-    tag "${meta_id}"
-    conda "${projectDir}/bioenv.yaml" 
+// İşçiyi çağır
+include { RUN_PROKKA } from './prokka.nf'
 
-    input:
-    tuple val(meta_id), path(assembly_fasta)
+workflow PROKKA_FLOW {
+    take:
+    assembly_input
 
-    output:
-    tuple val(meta_id), path("${meta_id}_prokka_out"), emit: prokka_dir
+    main:
+    prokka_out = RUN_PROKKA(assembly_input)
 
-    script:
-    """
-    prokka --outdir ${meta_id}_prokka_out --prefix ${meta_id} ${assembly_fasta} --force
-    """
+    emit:
+    prokka_dir = prokka_out.prokka_dir
 }
