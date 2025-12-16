@@ -1,4 +1,5 @@
 process BOWTIE_ALIGNMENT {
+    conda 'bioconda::bowtie2=2.5.1'
     input:
     path(index_path)
     tuple val(sample_id), path(fastq_files)

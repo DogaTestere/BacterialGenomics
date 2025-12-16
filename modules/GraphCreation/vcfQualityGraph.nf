@@ -1,4 +1,5 @@
 process VCF_QUALITY_GRAPH {
+    conda 'conda-forge::python=3.10 conda-forge::matplotlib conda-forge::pandas'
     input:
     tuple path(zipped_file), path(indexed_vcf), path(vcf_file)
     path python_script

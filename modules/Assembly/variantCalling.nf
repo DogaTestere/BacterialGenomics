@@ -1,4 +1,5 @@
 process BCFTOOLS_CALL {
+    conda 'bioconda::bcftools=1.17'
     input:
     path ref_file
     path sorted_bam

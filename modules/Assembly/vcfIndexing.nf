@@ -1,4 +1,5 @@
 process BCFTOOLS_INDEX {
+    conda 'bioconda::bcftools=1.17'
     input:
     path bcf_file
 

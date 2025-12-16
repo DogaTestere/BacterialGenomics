@@ -1,5 +1,5 @@
 process SAMTOOLS_INDEX {
-    // Indexes the sorted bam file and then returns the path to indexed path
+    conda 'bioconda::samtools=1.17'
     input:
     path sorted_bam
 

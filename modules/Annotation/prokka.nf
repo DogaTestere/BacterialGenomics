@@ -1,6 +1,7 @@
 process ANNOTATE_GENOME {
     // Sonuçları bu klasöre kopyala
-    publishDir "results/annotation", mode: 'copy'
+    //publishDir "results/annotation", mode: 'copy'
+    conda 'bioconda::prokka=1.14.6'
 
     input:
     path genome_fasta  // Gelen .fasta dosyası

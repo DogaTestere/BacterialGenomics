@@ -1,5 +1,6 @@
 process VISUALIZE_RESULTS {
-    publishDir "results/Visualizations", mode: 'copy'
+    conda 'conda-forge::python=3.10 conda-forge::seaborn conda-forge::matplotlib'
+    //publishDir "results/Visualizations", mode: 'copy'
 
     input:
     path prokka_dir      // Prokka çıktısını girdi olarak alıyoruz

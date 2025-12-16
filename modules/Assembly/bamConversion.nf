@@ -1,4 +1,6 @@
 process SAMTOOLS_SORT {
+    conda 'bioconda::samtools=1.17'
+
     input:
     path sam_file
 

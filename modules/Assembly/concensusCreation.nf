@@ -1,4 +1,6 @@
 process BCFTOOLS_CONCENSUS {
+    conda 'bioconda::bcftools=1.17'
+    
     input:
     tuple path(zipped_file), path(indexed_vcf), path(vcf_file)
     path ref_file

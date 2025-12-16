@@ -1,15 +1,15 @@
 
 nextflow.enable.dsl = 2
 
-include { RUN_KEGG } from './kegg_analiz.nf'
+include { RUN_KEGG_ANALYSIS } from '../../modules/Annotation/kegg_analiz.nf'
 
 workflow KEGG_FLOW {
     take:
     prokka_dir
 
     main:
-    kegg_out = RUN_KEGG(prokka_dir)
+    kegg_excel = RUN_KEGG_ANALYSIS(prokka_dir, file(params.kegg_analysis_script))
 
     emit:
-    kegg_excel = kegg_out.kegg_excel
+    kegg_excel
 }

@@ -1,7 +1,7 @@
 
 nextflow.enable.dsl = 2
 
-include { RUN_PLOTTING } from './visualize.nf'
+include { VISUALIZE_RESULTS } from '../../modules/GraphCreation/visualize.nf'
 
 workflow PLOTTING_FLOW {
     take:
@@ -11,9 +11,9 @@ workflow PLOTTING_FLOW {
     main:
     // İki veriyi birleştirip çizime yolluyoruz
     plotting_inputs = kegg_excel.join(prokka_dir)
-    final_out = RUN_PLOTTING(plotting_inputs)
+    final_folder = VISUALIZE_RESULTS(plotting_inputs, file(params.prokka_graph_script))
 
     emit:
-    final_folder = final_out.final_folder
+    final_folder
 }
 

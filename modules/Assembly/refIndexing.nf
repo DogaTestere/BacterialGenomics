@@ -1,5 +1,5 @@
 process BOWTIE_INDEXING {
-
+    conda 'bioconda::bowtie2=2.5.1'
     input:
     path ref_file
 
