@@ -1,23 +1,19 @@
+
 nextflow.enable.dsl = 2
 
-process RUN_PLOTTING {
-    tag "${meta_id}"
-    conda "${projectDir}/bioenv.yaml"
+include { RUN_PLOTTING } from './visualetion.nf'
 
-    input:
-    tuple val(meta_id), path(kegg_excel), path(prokka_dir)
+workflow PLOTTING_FLOW {
+    take:
+    kegg_excel
+    prokka_dir
 
-    output:
-    path("${meta_id}_Annotation_Results"), emit: final_folder
+    main:
+    // İki veriyi birleştirip çizime yolluyoruz
+    plotting_inputs = kegg_excel.join(prokka_dir)
+    final_out = RUN_PLOTTING(plotting_inputs)
 
-    script:
-    """
-    mkdir -p ${meta_id}_Annotation_Results
-    cp -r ${prokka_dir}/* ${meta_id}_Annotation_Results/
-    cp ${kegg_excel} ${meta_id}_Annotation_Results/
-
-    python3 ${projectDir}/scripts/plot_prokka.py \
-    --input ${kegg_excel} \
-    --output_dir ${meta_id}_Annotation_Results/Visualizations
-    """
+    emit:
+    final_folder = final_out.final_folder
 }
+
