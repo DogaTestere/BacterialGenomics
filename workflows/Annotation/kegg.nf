@@ -1,7 +1,7 @@
 
 nextflow.enable.dsl = 2
 
-include { RUN_KEGG } from './kegg_step.nf'
+include { RUN_KEGG } from './kegg_analiz.nf'
 
 workflow KEGG_FLOW {
     take:
