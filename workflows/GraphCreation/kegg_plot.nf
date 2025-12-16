@@ -1,7 +1,7 @@
 
 nextflow.enable.dsl = 2
 
-include { RUN_PLOTTING } from './visualetion.nf'
+include { RUN_PLOTTING } from './visualize.nf'
 
 workflow PLOTTING_FLOW {
     take:
