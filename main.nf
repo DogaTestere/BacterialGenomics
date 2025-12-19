@@ -11,7 +11,7 @@ include { PROKKA_FLOW }    from './workflows/Annotation/prokka.nf'
 include { PLOTTING_FLOW } from "./workflows/GraphCreation/kegg_plot.nf"
 include { KEGG_FLOW } from "./workflows/Annotation/kegg.nf"
 
-include { BAKTA_FLOW } from './workflows/Annotation/annotation.nf'
+include { BAKTA_FLOW } from './workflows/Annotation/bakta.nf'
 
 workflow {
     main:
@@ -38,8 +38,8 @@ workflow {
     kegg_out = KEGG_FLOW(annotation_out.prokka_dir)
    
     // Bakta annotation
-    db_file = file(params.bakta_db) 
-    bakta_out = BAKTA_FLOW(reference_out.concensus_fastq, db_file)
+    //db_file = file(params.bakta_db) 
+    bakta_out = BAKTA_FLOW(reference_out.concensus_fastq)
   
     // 5) Graph Oluşturma Adımları
     vcf_graph_out = VCF_GRAPH_CREATION(reference_out.indexed_vcf)
@@ -66,8 +66,7 @@ workflow {
     kegg_excel_file = kegg_out.kegg_excel
     bakta_results = bakta_out.bakta_dir
     // Grafik Oluşturma Outputları
-    depth_graph = vcf_graph_out.depth_png
-    qual_graph = vcf_graph_out.qual_png
+    vcf_graph = vcf_graph_out.results_png
     prokka_graph = kegg_graph_out.final_folder
 
 }
@@ -111,11 +110,7 @@ output {
     bakta_results {              
         path "./annotation/bakta"
     }
-
-    depth_graph {
-        path "./graphs/vcf"
-    }
-    qual_graph {
+    vcf_graph {
         path "./graphs/vcf"
     }
     kegg_excel_file {

@@ -64,24 +64,24 @@ def plotVcfFile(positions, quals, depths, outputPhotoPath):
     binned_qual = df.groupby("BIN")["QUAL"].median()
     binned_dp = df.groupby("BIN")["DP"].mean()
 
-    # --- 1. Median QUAL scatter + line ---
-    plt.figure(figsize=(12,4))
-    plt.scatter(binned_qual.index, binned_qual.values, s=20, alpha=0.7)
-    plt.plot(binned_qual.index, binned_qual.values, linewidth=1)
-    plt.xlabel("Genomic Position (10 kb bins)")
-    plt.ylabel("Median QUAL")
-    plt.tight_layout()
-    plt.savefig(outputPhotoPath.replace(".png", "_qual.png"), dpi=150)
-    plt.close()
+    fig, ax1 = plt.subplots(figsize=(12, 4))
 
-    # --- 2. Mean depth scatter + line ---
-    plt.figure(figsize=(12,4))
-    plt.scatter(binned_dp.index, binned_dp.values, s=20, alpha=0.7)
-    plt.plot(binned_dp.index, binned_dp.values, linewidth=1)
-    plt.xlabel("Genomic Position (10 kb bins)")
-    plt.ylabel("Mean Depth (DP)")
-    plt.tight_layout()
-    plt.savefig(outputPhotoPath.replace(".png", "_depth.png"), dpi=150)
+    color1 = 'tab:blue'
+    ax1.set_xlabel("Genomic Position (10 kb bins)")
+    ax1.set_ylabel("Median QUAL", color=color1)
+    ax1.scatter(binned_qual.index, binned_qual.values, s=20, alpha=0.7, color=color1, label="Median QUAL")
+    ax1.plot(binned_qual.index, binned_qual.values, linewidth=1, color=color1)
+    ax1.tick_params(axis='y', labelcolor=color1)
+
+    ax2 = ax1.twinx()
+    color2 = 'tab:orange'
+    ax2.set_ylabel("Mean Depth (DP)", color=color2)
+    ax2.scatter(binned_dp.index, binned_dp.values, s=20, alpha=0.7, color=color2, label="Mean Depth")
+    ax2.plot(binned_dp.index, binned_dp.values, linewidth=1, color=color2)
+    ax2.tick_params(axis='y', labelcolor=color2)
+
+    fig.tight_layout()
+    plt.savefig(outputPhotoPath, dpi=150)
     plt.close()
 
 
@@ -108,8 +108,6 @@ def main():
             depths.append(int(dp))
 
     plotVcfFile(positions, quals, depths, args.plot)
-
-
 
 if __name__ == "__main__":
     main()

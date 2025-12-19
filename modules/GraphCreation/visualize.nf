@@ -1,5 +1,5 @@
 process VISUALIZE_RESULTS {
-    conda 'conda-forge::python=3.10 conda-forge::seaborn conda-forge::matplotlib'
+    conda 'conda-forge::python=3.10 conda-forge::seaborn=0.13.2 conda-forge::matplotlib=3.10.8'
     //publishDir "results/Visualizations", mode: 'copy'
 
     input:

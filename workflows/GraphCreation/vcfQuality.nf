@@ -5,9 +5,9 @@ workflow VCF_GRAPH_CREATION {
     vcf_file_ch
 
     main:
-    (qual_png, depth_png, tsv_file) = VCF_QUALITY_GRAPH(vcf_file_ch, file(params.vcf_quality_graph_script))
+    (results_png, tsv_file) = VCF_QUALITY_GRAPH(vcf_file_ch, file(params.vcf_quality_graph_script))
 
     emit:
-    qual_png
-    depth_png
+    results_png
+    tsv_file
 }
