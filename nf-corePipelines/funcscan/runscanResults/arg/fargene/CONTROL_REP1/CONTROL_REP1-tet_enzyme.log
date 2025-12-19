@@ -1,0 +1,10 @@
+2025-12-19 09:11:59,984 INFO: Starting fARGene
+2025-12-19 09:11:59,985 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-19 09:11:59,985 INFO: Running on 4 processes
+2025-12-19 09:11:59,985 INFO: Parsing FASTA files
+2025-12-19 09:12:00,418 CRITICAL: Could not find file /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/a3/b82ed94de81e100940e42205f06d78/tet_enzyme/predictedGenes/GCA_000005845.2_ASM584v2_genomic-tet_enzyme-filtered.fasta
+2025-12-19 09:12:00,422 INFO: Done with pipeline
+2025-12-19 09:12:00,422 INFO: fARGene is done.
+Total number of possible genes: 0
+Total number of predicted ORFS longer than 90 nt: 0
+Output can be found in /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/a3/b82ed94de81e100940e42205f06d78/tet_enzyme

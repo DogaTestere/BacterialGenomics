@@ -1,0 +1,10 @@
+2025-12-19 09:11:56,285 INFO: Starting fARGene
+2025-12-19 09:11:56,285 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-19 09:11:56,285 INFO: Running on 4 processes
+2025-12-19 09:11:56,285 INFO: Parsing FASTA files
+2025-12-19 09:11:56,739 CRITICAL: Could not find file /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/40/3488b8abc83f65a04ea69cd71ad3db/class_d_1/predictedGenes/GCA_000005845.2_ASM584v2_genomic-class_D_1-filtered.fasta
+2025-12-19 09:11:56,742 INFO: Done with pipeline
+2025-12-19 09:11:56,742 INFO: fARGene is done.
+Total number of possible genes: 0
+Total number of predicted ORFS longer than 90 nt: 0
+Output can be found in /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/40/3488b8abc83f65a04ea69cd71ad3db/class_d_1

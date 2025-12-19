@@ -1,0 +1,50 @@
+
+ $$$$$$\  $$\      $$\ $$$$$$$\                                    $$\       $$\|
+$$  __$$\ $$$\    $$$ |$$  __$$\                                   $$ |      \__|
+$ /   $$ |$$$$\  $$$$ |$$ |  $$ | $$$$$$$\  $$$$$$\  $$$$$$\$$$$\  $$$$$$$\  $$\ 
+$$$$$$$$ |$$\$$\$$ $$ |$$$$$$$  |$$  _____|$$  __$$\ $$  _$$  _$$\ $$  __$$\ $$ |
+$$  __$$ |$$ \$$$  $$ |$$  ____/ $$ /      $$ /  $$ |$$ / $$ / $$ |$$ |  $$ |$$ |
+$$ |  $$ |$$ |\$  /$$ |$$ |      $$ |      $$ |  $$ |$$ | $$ | $$ |$$ |  $$ |$$ |
+$$ |  $$ |$$ | \_/ $$ |$$ |      \$$$$$$$\ \$$$$$$  |$$ | $$ | $$ |$$$$$$$  |$$ |
+\__|  \__|\__|     \__|\__|       \_______| \______/ \__| \__| \__|\_______/ \__|
+
+
+ ########################################################## 
+Processing AMP-files from sample: CONTROL_REP1
+found ampir file
+found amplify file
+found macrel file
+No InterproScan files were provided. Workflow continuing ....
+The fasta containing AMP sequences for CONTROL_REP1 was saved to CONTROL_REP1/ 
+
+The mmseqs alignment for CONTROL_REP1 in progress ....
+No AMP hits for CONTROL_REP1 were successfully aligned to the reference database. Consider changing the database.
+The mmseqs alignment for CONTROL_REP1 was saved to CONTROL_REP1/.
+Estimating functional and structural properties for CONTROL_REP1 ....
+Parsing the corresponding gene bank file for CONTROL_REP1 ....
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+writing CONTROL_REP1_U00096.3.gbk
+The summary file for CONTROL_REP1 was saved to CONTROL_REP1/CONTROL_REP1.tsv.

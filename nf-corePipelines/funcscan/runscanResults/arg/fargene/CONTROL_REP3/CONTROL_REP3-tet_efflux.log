@@ -1,0 +1,10 @@
+2025-12-19 09:13:40,857 INFO: Starting fARGene
+2025-12-19 09:13:40,857 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-19 09:13:40,857 INFO: Running on 4 processes
+2025-12-19 09:13:40,857 INFO: Parsing FASTA files
+2025-12-19 09:13:41,256 CRITICAL: Could not find file /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/a7/809132a8d2eb1058bdfb25541bf839/tet_efflux/predictedGenes/GCF_000005845.2_ASM584v2_genomic-tet_efflux-filtered.fasta
+2025-12-19 09:13:41,260 INFO: Done with pipeline
+2025-12-19 09:13:41,260 INFO: fARGene is done.
+Total number of possible genes: 0
+Total number of predicted ORFS longer than 90 nt: 0
+Output can be found in /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/a7/809132a8d2eb1058bdfb25541bf839/tet_efflux
