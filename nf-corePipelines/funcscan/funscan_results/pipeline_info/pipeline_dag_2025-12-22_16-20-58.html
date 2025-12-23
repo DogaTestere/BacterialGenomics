@@ -1,0 +1,276 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#B6ECE2',
+      'primaryTextColor': '#160F26',
+      'primaryBorderColor': '#065647',
+      'lineColor': '#545555',
+      'clusterBkg': '#BABCBD22',
+      'clusterBorder': '#DDDEDE',
+      'fontFamily': 'arial'
+    }
+  }
+}%%
+flowchart TB
+    subgraph " "
+    v2["Channel.fromList"]
+    v6["Channel.fromPath"]
+    v31["output_format"]
+    v69["model_dir"]
+    v85["model"]
+    v86["min_length"]
+    v87["min_probability"]
+    v97["database_id"]
+    v100["opt_amp_db"]
+    v138["format"]
+    v144["tool"]
+    v145["db"]
+    v149["Channel.fromList"]
+    v170["format"]
+    v171["software_version"]
+    v172["reference_db_version"]
+    end
+    subgraph " "
+    v7["ch_multiqc_config"]
+    v33[" "]
+    v36["fna"]
+    v51[" "]
+    v52[" "]
+    v53[" "]
+    v74[" "]
+    v75[" "]
+    v76[" "]
+    v89[" "]
+    v102[" "]
+    v103[" "]
+    v104[" "]
+    v105[" "]
+    v106[" "]
+    v107[" "]
+    v108[" "]
+    v109[" "]
+    v110[" "]
+    v111[" "]
+    v117["ch_summary_count"]
+    v119[" "]
+    v123[" "]
+    v124[" "]
+    v125[" "]
+    v128["ch_versions"]
+    v130["annotations"]
+    v136[" "]
+    v140[" "]
+    v147[" "]
+    v154[" "]
+    v155[" "]
+    v156[" "]
+    v157[" "]
+    v158[" "]
+    v159[" "]
+    v160[" "]
+    v161[" "]
+    v162[" "]
+    v163[" "]
+    v164[" "]
+    v165[" "]
+    v166[" "]
+    v167[" "]
+    v174[" "]
+    v176["ch_versions"]
+    v178["ch_input_to_hamronization_summarize"]
+    end
+    subgraph "NFCORE_FUNCSCAN [NFCORE_FUNCSCAN]"
+    subgraph "NFCORE_FUNCSCAN:FUNCSCAN [FUNCSCAN]"
+    v15(["GUNZIP_INPUT_PREP"])
+    v22(["SEQKIT_SEQ_LENGTH"])
+    subgraph "NFCORE_FUNCSCAN:FUNCSCAN:ANNOTATION [ANNOTATION]"
+    v32(["PYRODIGAL"])
+    v34(["GUNZIP_PYRODIGAL_FAA"])
+    v35(["GUNZIP_PYRODIGAL_FNA"])
+    v37(["GUNZIP_PYRODIGAL_GBK"])
+    v38(( ))
+    end
+    subgraph "NFCORE_FUNCSCAN:FUNCSCAN:AMP [AMP]"
+    v70(["AMPLIFY_PREDICT"])
+    v73(["MACREL_CONTIGS"])
+    v78(["GUNZIP_MACREL_PRED"])
+    v79(["GUNZIP_MACREL_ORFS"])
+    v88(["AMPIR"])
+    v98(["AMP_DATABASE_DOWNLOAD"])
+    v101(["AMPCOMBI2_PARSETABLES"])
+    v118(["AMPCOMBI2_COMPLETE"])
+    v122(["AMPCOMBI2_CLUSTER"])
+    v71(( ))
+    v72(( ))
+    v113(( ))
+    v121(( ))
+    end
+    subgraph "NFCORE_FUNCSCAN:FUNCSCAN:ARG [ARG]"
+    v133(["AMRFINDERPLUS_UPDATE"])
+    v135(["AMRFINDERPLUS_RUN"])
+    v139(["HAMRONIZATION_AMRFINDERPLUS"])
+    v146(["ARGNORM_AMRFINDERPLUS"])
+    v153(["FARGENE"])
+    v173(["HAMRONIZATION_FARGENE"])
+    v134(( ))
+    v142(( ))
+    v143(( ))
+    v150(( ))
+    v169(( ))
+    end
+    v12(( ))
+    v16(( ))
+    end
+    end
+    v2 --> v12
+    v6 --> v7
+    v12 --> v15
+    v15 --> v12
+    v15 --> v16
+    v12 --> v22
+    v22 --> v12
+    v22 --> v16
+    v31 --> v32
+    v12 --> v32
+    v32 --> v37
+    v32 --> v35
+    v32 --> v34
+    v32 --> v33
+    v32 --> v38
+    v34 --> v12
+    v34 --> v38
+    v35 --> v36
+    v35 --> v38
+    v37 --> v12
+    v37 --> v38
+    v12 --> v51
+    v12 --> v52
+    v12 --> v53
+    v69 --> v70
+    v12 --> v70
+    v70 --> v71
+    v70 --> v72
+    v12 --> v73
+    v73 --> v76
+    v73 --> v79
+    v73 --> v78
+    v73 --> v75
+    v73 --> v74
+    v73 --> v71
+    v78 --> v71
+    v78 --> v72
+    v79 --> v71
+    v79 --> v72
+    v85 --> v88
+    v86 --> v88
+    v87 --> v88
+    v12 --> v88
+    v88 --> v89
+    v88 --> v71
+    v88 --> v72
+    v97 --> v98
+    v98 --> v101
+    v98 --> v71
+    v100 --> v101
+    v72 --> v101
+    v101 --> v111
+    v101 --> v110
+    v101 --> v109
+    v101 --> v108
+    v101 --> v107
+    v101 --> v106
+    v101 --> v105
+    v101 --> v104
+    v101 --> v103
+    v101 --> v102
+    v101 --> v71
+    v101 --> v113
+    v113 --> v117
+    v113 --> v118
+    v118 --> v119
+    v118 --> v71
+    v118 --> v121
+    v121 --> v122
+    v122 --> v125
+    v122 --> v124
+    v122 --> v123
+    v122 --> v71
+    v16 --> v128
+    v12 --> v130
+    v133 --> v135
+    v133 --> v134
+    v12 --> v135
+    v135 --> v139
+    v135 --> v136
+    v135 --> v134
+    v138 --> v139
+    v139 --> v140
+    v139 --> v134
+    v139 --> v142
+    v139 --> v143
+    v144 --> v146
+    v145 --> v146
+    v143 --> v146
+    v146 --> v147
+    v146 --> v134
+    v149 --> v150
+    v150 --> v153
+    v153 --> v167
+    v153 --> v166
+    v153 --> v165
+    v153 --> v164
+    v153 --> v163
+    v153 --> v162
+    v153 --> v161
+    v153 --> v160
+    v153 --> v159
+    v153 --> v158
+    v153 --> v157
+    v153 --> v156
+    v153 --> v155
+    v153 --> v154
+    v153 --> v134
+    v153 --> v169
+    v170 --> v173
+    v171 --> v173
+    v172 --> v173
+    v169 --> v173
+    v173 --> v174
+    v173 --> v134
+    v173 --> v142
+    v134 --> v176
+    v142 --> v178
+    v12 --> v72
+    v12 --> v150
+    v38 --> v16
+    v71 --> v16
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>

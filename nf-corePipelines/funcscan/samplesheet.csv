@@ -1,4 +1,2 @@
 sample,fasta
-CONTROL_REP1,GenomeFiles/GCA_000005845.2_ASM584v2_genomic.fna
-CONTROL_REP2,GenomeFiles/GCA_000008865.2_ASM886v2_genomic.fna
-CONTROL_REP3,GenomeFiles/GCF_000005845.2_ASM584v2_genomic.fna
+CONTROL_REP1,example_files/GCA_000005845.2_ASM584v2_genomic.fna

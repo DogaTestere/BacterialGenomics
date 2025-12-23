@@ -1,0 +1,10 @@
+2025-12-23 15:18:29,505 INFO: Starting fARGene
+2025-12-23 15:18:29,505 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-23 15:18:29,506 INFO: Running on 4 processes
+2025-12-23 15:18:29,506 INFO: Parsing FASTA files
+2025-12-23 15:18:29,632 CRITICAL: Could not find file /home/yasemen/School/nf-coreLinting/work/f1/61a7c619a5e12a050e4373cfa7186e/tet_efflux/predictedGenes/ec1_S1_L001-tet_efflux-filtered.fasta
+2025-12-23 15:18:29,635 INFO: Done with pipeline
+2025-12-23 15:18:29,635 INFO: fARGene is done.
+Total number of possible genes: 0
+Total number of predicted ORFS longer than 90 nt: 0
+Output can be found in /home/yasemen/School/nf-coreLinting/work/f1/61a7c619a5e12a050e4373cfa7186e/tet_efflux

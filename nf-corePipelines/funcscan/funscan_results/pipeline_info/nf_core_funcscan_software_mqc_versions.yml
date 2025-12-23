@@ -1,0 +1,5 @@
+AMP_DATABASE_DOWNLOAD:
+  ampcombi: 2.0.1
+Workflow:
+    nf-core/funcscan: v3.0.0
+    Nextflow: 25.10.0
