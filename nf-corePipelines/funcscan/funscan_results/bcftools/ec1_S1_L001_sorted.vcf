@@ -25,7 +25,7 @@
 ##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
 ##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
 ##bcftools_callVersion=1.9+htslib-1.9
-##bcftools_callCommand=call -mv -Ob -o ec1_S1_L001_sorted.bcf; Date=Tue Dec 23 15:14:28 2025
+##bcftools_callCommand=call -mv -Ob -o ec1_S1_L001_sorted.bcf; Date=Thu Dec 25 07:53:38 2025
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	ec1_S1_L001_sorted.bam
 U00096.3	110254	.	T	A	4.37899	.	DP=2;SGB=-0.379885;RPB=1;MQB=1;MQSB=1;BQB=1;MQ0F=0;ICB=1;HOB=0.5;AC=1;AN=2;DP4=0,1,1,0;MQ=42	GT:PL	0/1:35,0,35
 U00096.3	180996	.	T	G	4.36405	.	DP=2;SGB=-0.379885;RPB=1;MQB=1;BQB=1;MQ0F=0;ICB=1;HOB=0.5;AC=1;AN=2;DP4=0,1,0,1;MQ=42	GT:PL	0/1:35,0,28

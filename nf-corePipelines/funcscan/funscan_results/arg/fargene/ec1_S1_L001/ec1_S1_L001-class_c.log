@@ -1,10 +1,10 @@
-2025-12-23 15:18:30,005 INFO: Starting fARGene
-2025-12-23 15:18:30,005 INFO: Starting pipeline, planning to analyze 1 files
-2025-12-23 15:18:30,005 INFO: Running on 4 processes
-2025-12-23 15:18:30,005 INFO: Parsing FASTA files
-2025-12-23 15:18:30,336 CRITICAL: Could not find file /home/yasemen/School/nf-coreLinting/work/24/6ee615f04c924c857ec2904a058179/class_c/predictedGenes/ec1_S1_L001-class_C-filtered.fasta
-2025-12-23 15:18:30,339 INFO: Done with pipeline
-2025-12-23 15:18:30,339 INFO: fARGene is done.
+2025-12-25 07:55:35,275 INFO: Starting fARGene
+2025-12-25 07:55:35,275 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-25 07:55:35,276 INFO: Running on 4 processes
+2025-12-25 07:55:35,276 INFO: Parsing FASTA files
+2025-12-25 07:55:35,565 CRITICAL: Could not find file /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/58/d59d9b5ee36f28bc75f8edf4cbde54/class_c/predictedGenes/ec1_S1_L001-class_C-filtered.fasta
+2025-12-25 07:55:35,568 INFO: Done with pipeline
+2025-12-25 07:55:35,568 INFO: fARGene is done.
 Total number of possible genes: 0
 Total number of predicted ORFS longer than 90 nt: 0
-Output can be found in /home/yasemen/School/nf-coreLinting/work/24/6ee615f04c924c857ec2904a058179/class_c
+Output can be found in /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/58/d59d9b5ee36f28bc75f8edf4cbde54/class_c

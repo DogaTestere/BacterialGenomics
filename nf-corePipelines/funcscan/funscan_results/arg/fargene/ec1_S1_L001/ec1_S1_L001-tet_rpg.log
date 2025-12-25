@@ -1,10 +1,10 @@
-2025-12-23 15:18:27,740 INFO: Starting fARGene
-2025-12-23 15:18:27,740 INFO: Starting pipeline, planning to analyze 1 files
-2025-12-23 15:18:27,741 INFO: Running on 4 processes
-2025-12-23 15:18:27,741 INFO: Parsing FASTA files
-2025-12-23 15:18:28,714 CRITICAL: Could not find file /home/yasemen/School/nf-coreLinting/work/d8/3fdf8b5ea8b224eff152866559b752/tet_rpg/predictedGenes/ec1_S1_L001-tet_rpg-filtered.fasta
-2025-12-23 15:18:28,717 INFO: Done with pipeline
-2025-12-23 15:18:28,717 INFO: fARGene is done.
+2025-12-25 07:55:36,230 INFO: Starting fARGene
+2025-12-25 07:55:36,230 INFO: Starting pipeline, planning to analyze 1 files
+2025-12-25 07:55:36,230 INFO: Running on 4 processes
+2025-12-25 07:55:36,230 INFO: Parsing FASTA files
+2025-12-25 07:55:36,585 CRITICAL: Could not find file /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/58/e3d0582421569db911a2b88f450aa9/tet_rpg/predictedGenes/ec1_S1_L001-tet_rpg-filtered.fasta
+2025-12-25 07:55:36,588 INFO: Done with pipeline
+2025-12-25 07:55:36,588 INFO: fARGene is done.
 Total number of possible genes: 0
 Total number of predicted ORFS longer than 90 nt: 0
-Output can be found in /home/yasemen/School/nf-coreLinting/work/d8/3fdf8b5ea8b224eff152866559b752/tet_rpg
+Output can be found in /home/yasemen/School/BacterialGenomics/nf-corePipelines/funcscan/work/58/e3d0582421569db911a2b88f450aa9/tet_rpg
