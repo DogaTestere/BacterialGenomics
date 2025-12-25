@@ -1,0 +1,821 @@
+Seq-entry ::= set {
+  class genbank ,
+  seq-set {
+    set {
+      class nuc-prot ,
+      descr {
+        source {
+          org {
+            taxname "Genus species" ,
+            orgname {
+              mod {
+                {
+                  subtype strain ,
+                  subname "strain" } } ,
+              gcode 11 } } } ,
+        comment "Annotated using prokka 1.15.6 from
+ https://github.com/tseemann/prokka" ,
+        user {
+          type
+            str "NcbiCleanup" ,
+          data {
+            {
+              label
+                str "method" ,
+              data
+                str "SeriousSeqEntryCleanup" } ,
+            {
+              label
+                str "version" ,
+              data
+                int 8 } ,
+            {
+              label
+                str "month" ,
+              data
+                int 12 } ,
+            {
+              label
+                str "day" ,
+              data
+                int 25 } ,
+            {
+              label
+                str "year" ,
+              data
+                int 2025 } } } ,
+        create-date
+          std {
+            year 2025 ,
+            month 12 ,
+            day 25 } } ,
+      seq-set {
+        seq {
+          id {
+            local
+              str "ec1" } ,
+          descr {
+            molinfo {
+              biomol genomic } } ,
+          inst {
+            repr delta ,
+            mol dna ,
+            length 3611147 ,
+            ext
+              delta {
+                literal {
+                  length 857487 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 331 ,
+                  seq-data
+                    ncbi4na '12484214288822288214424F4188218121424422142218224
+82182F181F212F12F8211144FF4121421442821F1141242F2214F48F4221F148424882122411F1
+2484242F121122482F8224F1FF28482181242481111214221424284F24F41888142F22412F81F2
+222128488248221888224242141241841248212842224428481842424144881224128424422841
+488888811F84F24F111182484884144221124222181184240'H } ,
+                literal {
+                  length 13 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 37 ,
+                  seq-data
+                    ncbi4na '2182211242218821844221818211F41F888280'H } ,
+                literal {
+                  length 74684 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 986 ,
+                  seq-data
+                    ncbi4na '24F8881824888821241142828284281882248812828224412
+822421224224848828824488211482221121822444241128442484888218814222448142184112
+218818224821422128221284414124124411418248842241142442488221224282221421841248
+228481284888212848841142242244814841224222148421484228212418212142148221424241
+124841212421482828282248818212142141128241122248214142122182428418842888288821
+F442212F284228481848422248882418442448121421448888242821142112142421882844F4FF
+F4182F4481112124888442188F18242144FF812218211488284228482842411421424222181222
+412418112218124884421428282241811218448481812441411421218224818218214848412412
+842442442218221822148218244882482841411841248421128424212424121222441412112442
+841281142881282222182222444211811444242484242818221288888842224822181882112442
+882888414414882188882218248888288422414214424284414882888118284288218442442142
+1F488214144214F112112284882822442442412142148114128822882284481884288124221414
+1118112844284428F2812122184884224442112414441412F48218222244882111428284284112
+1'H } ,
+                literal {
+                  length 19262 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 10 ,
+                  seq-data
+                    ncbi4na '411F18FF82'H } ,
+                literal {
+                  length 565544 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 37 ,
+                  seq-data
+                    ncbi4na '42214118FF41FFFFFF112F8F442F424FF11140'H } ,
+                literal {
+                  length 618848 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 141 ,
+                  seq-data
+                    ncbi4na '22428442112111441F1144488424282488424441288112221
+121888212112124142841241214221842142122848282124488222411442121882821828284111
+128822484418480'H } ,
+                literal {
+                  length 123247 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 5 ,
+                  seq-data
+                    ncbi4na '428F20'H } ,
+                literal {
+                  length 74177 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 28 ,
+                  seq-data
+                    ncbi4na '8288441F411FF8182FF1F1218FF8'H } ,
+                literal {
+                  length 133045 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 83 ,
+                  seq-data
+                    ncbi4na '88FF82FF212F211284184284888422114244F81148124F82F
+18282112411182112F244244F8F4218F420'H } ,
+                literal {
+                  length 651221 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 45 ,
+                  seq-data
+                    ncbi2na '93065FE6EBDCDFA66FDEBA40'H } ,
+                literal {
+                  length 11 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } ,
+                literal {
+                  length 53 ,
+                  seq-data
+                    ncbi4na '44882884284F41118F242141F11842242111FFF2428FF1F84
+44420'H } ,
+                literal {
+                  length 491852 ,
+                  seq-data
+                    gap {
+                      type scaffold ,
+                      linkage linked ,
+                      linkage-evidence {
+                        {
+                          type paired-ends } } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_1" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00001 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 52 ,
+            seq-data
+              ncbieaa "MTSSSARKWTNSGXXSXLNXXSAGCFTRMTXXGXRLXRTXSVNALWXXWXVX" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 10 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 51 ,
+                        id
+                          local
+                            str "ec1_1" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_2" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00002 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 33 ,
+            seq-data
+              ncbieaa "MAMNGVGXXXXXRIMGVGLNTIXRXLKNSGRSR" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 11 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 32 ,
+                        id
+                          local
+                            str "ec1_2" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_3" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00003 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 33 ,
+            seq-data
+              ncbieaa "MVHATGLMKHASSPGCWDLNRRTRRCGVRRVTE" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 12 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 32 ,
+                        id
+                          local
+                            str "ec1_3" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_4" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00004 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 59 ,
+            seq-data
+              ncbieaa "MPKRRSTAPSMTSCTVSLLKPPVVTAQCSASRSQQSSANVTRSLSPLSQQNSNPS
+EHHR" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 13 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 58 ,
+                        id
+                          local
+                            str "ec1_4" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_5" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00005 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 64 ,
+            seq-data
+              ncbieaa "MLSESCQRMVIVGYGRCFADRQNLMVXLRXMPNVFTXSXXRMRCCLSENLLYRHR
+NGHIQAXWP" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 14 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 63 ,
+                        id
+                          local
+                            str "ec1_5" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_6" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00006 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 41 ,
+            seq-data
+              ncbieaa "MYTEKHIRIISVTTAAAIHPVIGSSENDVQLRTRHPETTAD" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 15 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 40 ,
+                        id
+                          local
+                            str "ec1_6" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_7" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00007 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 41 ,
+            seq-data
+              ncbieaa "MTCNCARDTRRQRLTKLTPHPRAIRARALSTFLPVHIQRLL" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 16 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 40 ,
+                        id
+                          local
+                            str "ec1_7" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_8" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00008 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 66 ,
+            seq-data
+              ncbieaa "MRYPLFCPSIFNGFFEEFIFHRFLAEQALEFFNLLHGGSXFRGXNNLFSGGDSSK
+TSFLVLLTPEK" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 17 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 65 ,
+                        id
+                          local
+                            str "ec1_8" } } } } } } ,
+        seq {
+          id {
+            local
+              str "ec1_9" } ,
+          descr {
+            title "hypothetical protein HHCJEDMM_00009 [Genus species]" ,
+            molinfo {
+              biomol peptide ,
+              tech concept-trans } } ,
+          inst {
+            repr raw ,
+            mol aa ,
+            length 33 ,
+            seq-data
+              ncbieaa "MRSLRDLTQHFTTRADDSHAAPVSRFPKAHSHL" } ,
+          annot {
+            {
+              data
+                ftable {
+                  {
+                    id
+                      local
+                        id 18 ,
+                    data
+                      prot {
+                        name {
+                          "hypothetical protein" } } ,
+                    location
+                      int {
+                        from 0 ,
+                        to 32 ,
+                        id
+                          local
+                            str "ec1_9" } } } } } } } ,
+      annot {
+        {
+          data
+            ftable {
+              {
+                id
+                  local
+                    id 1 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_1" ,
+                location
+                  int {
+                    from 857572 ,
+                    to 857730 ,
+                    strand minus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00001" } } } } ,
+              {
+                id
+                  local
+                    id 2 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_2" ,
+                location
+                  int {
+                    from 857752 ,
+                    to 857853 ,
+                    strand minus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00002" } } } } ,
+              {
+                id
+                  local
+                    id 3 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_3" ,
+                location
+                  int {
+                    from 932580 ,
+                    to 932681 ,
+                    strand minus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00003" } } } } ,
+              {
+                id
+                  local
+                    id 4 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_4" ,
+                location
+                  int {
+                    from 932720 ,
+                    to 932899 ,
+                    strand plus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00004" } } } } ,
+              {
+                id
+                  local
+                    id 5 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_5" ,
+                location
+                  int {
+                    from 932910 ,
+                    to 933104 ,
+                    strand minus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00005" } } } } ,
+              {
+                id
+                  local
+                    id 6 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_6" ,
+                location
+                  int {
+                    from 933106 ,
+                    to 933231 ,
+                    strand plus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00006" } } } } ,
+              {
+                id
+                  local
+                    id 7 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_7" ,
+                location
+                  int {
+                    from 933185 ,
+                    to 933310 ,
+                    strand plus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00007" } } } } ,
+              {
+                id
+                  local
+                    id 8 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_8" ,
+                location
+                  int {
+                    from 933264 ,
+                    to 933464 ,
+                    strand plus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00008" } } } } ,
+              {
+                id
+                  local
+                    id 9 ,
+                data
+                  cdregion {
+                    frame one ,
+                    code {
+                      id 11 } } ,
+                product
+                  whole
+                    local
+                      str "ec1_9" ,
+                location
+                  int {
+                    from 2137262 ,
+                    to 2137363 ,
+                    strand plus ,
+                    id
+                      local
+                        str "ec1" } ,
+                qual {
+                  {
+                    qual "inference" ,
+                    val "ab initio prediction:Prodigal:v2.6" } } ,
+                xref {
+                  {
+                    data
+                      gene {
+                        locus-tag "HHCJEDMM_00009" } } } } } } } } } }

@@ -1,0 +1,37 @@
+>Feature ec1
+857731	857573	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00001
+			product	hypothetical protein
+857854	857753	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00002
+			product	hypothetical protein
+932682	932581	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00003
+			product	hypothetical protein
+932721	932900	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00004
+			product	hypothetical protein
+933105	932911	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00005
+			product	hypothetical protein
+933107	933232	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00006
+			product	hypothetical protein
+933186	933311	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00007
+			product	hypothetical protein
+933265	933465	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00008
+			product	hypothetical protein
+2137263	2137364	CDS
+			inference	ab initio prediction:Prodigal:v2.6
+			locus_tag	HHCJEDMM_00009
+			product	hypothetical protein
