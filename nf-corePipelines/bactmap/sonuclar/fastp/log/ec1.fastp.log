@@ -22,7 +22,7 @@ total bases: 5006771
 Q20 bases: 4919414(98.2552%)
 Q30 bases: 4632056(92.5158%)
 
-Read2 after filtering:
+Read2 aftering filtering:
 total reads: 33538
 total bases: 5013955
 Q20 bases: 4905402(97.835%)
@@ -33,12 +33,12 @@ reads passed filter: 67076
 reads failed due to low quality: 87642
 reads failed due to too many N: 0
 reads failed due to too short: 2
-reads with adapter trimmed: 40
-bases trimmed due to adapters: 1840
+reads with adapter trimmed: 1894
+bases trimmed due to adapters: 16034
 reads with polyX in 3' end: 60
 bases trimmed in polyX tail: 567
 
-Duplication rate: 0.00517063%
+Duplication rate: 0.00914805%
 
 Insert size peak (evaluated by paired-end reads): 269
 
@@ -46,4 +46,4 @@ JSON report: ec1.fastp.json
 HTML report: ec1.fastp.html
 
 fastp --in1 ec1_1.fastq.gz --in2 ec1_2.fastq.gz --out1 ec1_1.trim.fastq.gz --out2 ec1_2.trim.fastq.gz --json ec1.fastp.json --html ec1.fastp.html --thread 2 --detect_adapter_for_pe --cut_front --cut_tail --trim_poly_x --cut_mean_quality 30 --qualified_quality_phred 30 --unqualified_percent_limit 10 --length_required 50 --adapter_fasta adapter.fasta 
-fastp v0.23.2, time used: 25 seconds
+fastp v0.20.1, time used: 12 seconds

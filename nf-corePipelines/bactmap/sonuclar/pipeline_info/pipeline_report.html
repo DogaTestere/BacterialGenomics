@@ -1,0 +1,88 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="nf-core/bactmap: A mapping-based pipeline for creating a phylogeny from bacterial whole genome sequences">
+  <title>nf-core/bactmap Pipeline Report</title>
+</head>
+<body>
+<div style="font-family: Helvetica, Arial, sans-serif; padding: 30px; max-width: 800px; margin: 0 auto;">
+
+<img src="cid:nfcorepipelinelogo">
+
+<h1>nf-core/bactmap v1.0.0</h1>
+<h2>Run Name: desperate_monod</h2>
+
+
+    <div style="color: #a94442; background-color: #f2dede; border-color: #ebccd1; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;">
+        <h4 style="margin-top:0; color: inherit;">nf-core/bactmap execution completed unsuccessfully!</h4>
+        <p>The exit status of the task that caused the workflow execution to fail was: <code>1</code>.</p>
+        <p>The full error message was:</p>
+        <pre style="white-space: pre-wrap; overflow: visible; margin-bottom: 0;">Error executing process > 'NFCORE_BACTMAP:BACTMAP:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)'
+
+Caused by:
+  Process `NFCORE_BACTMAP:BACTMAP:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  check_samplesheet.py samplesheet.csv samplesheet.valid.csv
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: /home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/bin/check_samplesheet.py: Permission denied
+
+Work dir:
+  /home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/work/7c/00167c9d799bde95e0620ec84c2ea2
+
+Container:
+  quay.io/biocontainers/python:3.8.3
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`</pre>
+    </div>
+    
+
+<p>The workflow was completed at <strong>2025-12-25T12:34:17.017749365+03:00</strong> (duration: <strong>6.9s</strong>)</p>
+<p>The command used to launch the workflow was as follows:</p>
+<pre style="white-space: pre-wrap; overflow: visible; background-color: #ededed; padding: 15px; border-radius: 4px; margin-bottom:30px;">nextflow run ./main.nf -profile docker --input ./samplesheet.csv --reference ./GCA_000008865.2_ASM886v2_genomic.fna --outdir ./sonuclar</pre>
+
+<h3>Pipeline Configuration:</h3>
+<table style="width:100%; max-width:100%; border-spacing: 0; border-collapse: collapse; border:0; margin-bottom: 30px;">
+    <tbody style="border-bottom: 1px solid #ddd;">
+        <tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>runName</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>desperate_monod</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>containerEngine</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>docker</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>launchDir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>workDir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/work</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>projectDir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>userName</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>yasemen</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>profile</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>docker</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>configFiles</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/nextflow.config</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>input</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>./samplesheet.csv</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>outdir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>./sonuclar</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>reference</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>./GCA_000008865.2_ASM886v2_genomic.fna</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>adapter_file</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/assets/adapters.fas</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>max_time</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>168.h</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Date Started</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>2025-12-25T12:34:10.124666061+03:00</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Date Completed</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>2025-12-25T12:34:17.017749365+03:00</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline script file path</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/yasemen/School/BacterialGenomics/nf-corePipelines/bactmap/main.nf</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline script hash ID</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>2e456c24888337ef099dc16d232b46a5</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Version</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>25.10.0</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Build</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>10289</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Compile Timestamp</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>22-10-2025 16:26 UTC</pre></td></tr>
+    </tbody>
+</table>
+
+<p>nf-core/bactmap</p>
+<p><a href="https://github.com/nf-core/bactmap">https://github.com/nf-core/bactmap</a></p>
+
+</div>
+
+</body>
+</html>

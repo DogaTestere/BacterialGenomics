@@ -1,2 +1,2 @@
 sample,fastq_1,fastq_2
-ec1,./ec1_S1_L001_R1_001.fastq.gz,./ec1_S1_L001_R2_001.fastq.gz
+ec1, ec1_S1_L001_R1_001.fastq.gz, ec1_S1_L001_R2_001.fastq.gz

@@ -1,7 +1,4 @@
-Sketching ec1_1.trim.fastq.gz...
-Sketching ec1_2.trim.fastq.gz...
-Estimated genome size: 2.94726e+06
-Estimated coverage:    1.498
-Estimated genome size: 2.93219e+06
-Estimated coverage:    1.465
+WARNING: The option p will be ignored with r.
+Estimated genome size: 4.29587e+06
+Estimated coverage:    2.007
 Writing to ec1.msh...
