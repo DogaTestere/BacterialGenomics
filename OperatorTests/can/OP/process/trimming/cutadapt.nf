@@ -1,7 +1,7 @@
 nextflow.enable.dsl = 2
 
 process TRIMMING {
-
+    conda "bioconda::cutadapt"
     input:
         tuple val(sample), path(read1), path(read2)
 

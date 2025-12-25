@@ -8,3 +8,8 @@ work/
 .nextflow.log.*
 
 docker_images/
+execution_report_*
+execution_timeline_*
+execution_trace_*
+params_*
+pipeline_dag_*

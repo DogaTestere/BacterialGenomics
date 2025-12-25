@@ -1,7 +1,6 @@
 include { SPADES_ASSEMBLY } from '../../process/Assembly/spades.nf'
 
 workflow ASSEMBLY_PIPELINE {
-
     take:
         trimmed_fastq_ch
 
