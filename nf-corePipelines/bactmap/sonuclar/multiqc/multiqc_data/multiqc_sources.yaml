@@ -1,0 +1,9 @@
+'MAPPING: SAMTools (raw)':
+  stats:
+    ec1: /home/iremay/School/BacterialGenomics/nf-corePipelines/bactmap/work/63/ab8ef865308f6fc7d2bdb0bacda7c1/samtools/ec1.sorted.bam.stats
+'PREPROCESS: fastp (adapter trimming)':
+  all_sections:
+    ec1: /home/iremay/School/BacterialGenomics/nf-corePipelines/bactmap/work/63/ab8ef865308f6fc7d2bdb0bacda7c1/fastp/ec1.fastp.json
+'VARIANTS: BCFTools (BCFTools)':
+  stats:
+    ec1: /home/iremay/School/BacterialGenomics/nf-corePipelines/bactmap/work/63/ab8ef865308f6fc7d2bdb0bacda7c1/variants/ec1.bcftools_stats.txt

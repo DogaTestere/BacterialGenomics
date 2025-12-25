@@ -1,0 +1,11 @@
+'MAPPING: SAMTools (raw)':
+  'MAPPING: SAMTools (raw)':
+  - '1.21'
+'PREPROCESS: fastp (adapter trimming)':
+  'PREPROCESS: fastp (adapter trimming)':
+  - 0.23.2
+'VARIANTS: BCFTools (BCFTools)':
+  HTSlib:
+  - '1.21'
+  'VARIANTS: BCFTools (BCFTools)':
+  - '1.11'

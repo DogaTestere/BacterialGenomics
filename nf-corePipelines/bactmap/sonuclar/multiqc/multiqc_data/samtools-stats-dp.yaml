@@ -1,0 +1,14 @@
+ec1:
+  Bases Trimmed: 0.0
+  Diff chromosomes: 7.0e-06
+  Duplicated: 0.0
+  Duplicated bases: 0.0
+  Inward pairs: 0.030067
+  Mapped &amp; paired: 0.060441999999999996
+  Mapped bases (CIGAR): 9.004412
+  Other orientation: 7.0e-05
+  Outward pairs: 7.7e-05
+  Properly paired: 0.05903
+  QC Failed: 0.0
+  Reads MQ0: 0.000842
+  Total sequences: 0.060875

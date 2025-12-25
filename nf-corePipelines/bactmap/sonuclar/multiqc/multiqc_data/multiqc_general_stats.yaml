@@ -1,0 +1,25 @@
+ec1:
+  mapping_samtools_raw_stats-error_rate: 1.8122449999999999
+  mapping_samtools_raw_stats-insert_size_average: 297.0
+  mapping_samtools_raw_stats-non_primary_alignments: 0.0
+  mapping_samtools_raw_stats-raw_total_sequences: 0.060875
+  mapping_samtools_raw_stats-reads_MQ0_percent: 1.3831622176591376
+  mapping_samtools_raw_stats-reads_mapped: 0.060875
+  mapping_samtools_raw_stats-reads_mapped_percent: 100.0
+  mapping_samtools_raw_stats-reads_properly_paired_percent: 96.96919917864476
+  preprocess_fastp_adapter_trimming-after_filtering_gc_content: 50.759
+  preprocess_fastp_adapter_trimming-after_filtering_q30_bases: 9.224789
+  preprocess_fastp_adapter_trimming-after_filtering_q30_rate: 92.0571
+  preprocess_fastp_adapter_trimming-before_filtering_read1_mean_length: 150.0
+  preprocess_fastp_adapter_trimming-before_filtering_read2_mean_length: 150.0
+  preprocess_fastp_adapter_trimming-filtering_result_passed_filter_reads: 0.067076
+  preprocess_fastp_adapter_trimming-pct_adapter: 0.02585315408479835
+  preprocess_fastp_adapter_trimming-pct_duplication: 0.005170630000000001
+  preprocess_fastp_adapter_trimming-pct_surviving: 43.35315408479835
+  variants_bcftools_bcftools_stats-number_of_MNPs: 0
+  variants_bcftools_bcftools_stats-number_of_SNPs: 55828
+  variants_bcftools_bcftools_stats-number_of_indels: 220
+  variants_bcftools_bcftools_stats-number_of_multiallelic_SNP_sites: 0
+  variants_bcftools_bcftools_stats-number_of_multiallelic_sites: 0
+  variants_bcftools_bcftools_stats-number_of_records: 3611524
+  variants_bcftools_bcftools_stats-tstv: 2.6
