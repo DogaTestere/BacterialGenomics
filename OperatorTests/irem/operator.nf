@@ -12,7 +12,6 @@ workflow {
     ]
 
     channel.fromList(dna_samples)
-        // --- 3 OPERATÖRÜN BİYOLOJİYE UYGULANMASI ---
 
         // 1. UNIQUE: Aynı DNA dizisine sahip mükerrer kayıtları siler.
         // S1 ve S3 aynı diziye sahip, biri elenir.
